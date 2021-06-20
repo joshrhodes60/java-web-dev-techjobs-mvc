@@ -14,45 +14,42 @@
 
     <table>
         <caption>Jobs With Skill: Ruby</caption>
-<!--        <tr>-->
-<!--            <th scope = "row">ID</th>-->
-<!--            <th scope = "row">Name</th>-->
-<!--            <th scope = "row">Employer</th>-->
-<!--            <th scope = "row">Location</th>-->
-<!--            <th scope = "row">Position Type</th>-->
-<!--            <th scope = "row">Skill</th>-->
-<!--        </tr>-->
+
+            <th:block th:each = "Job : ${jobs}">
+        <tr>
+        <td th:text = "${job}"> </td>
+        </tr>
 
         <tr>
             <th scope="row">ID:</th>
-            <td></td>
+            <td th:text = ${Job.id}></td>
         </tr>
 
         <tr>
             <th scope="row">Name:</th>
-            <td></td>
+            <td th:text = ${Job.name}></td>
         </tr>
 
         <tr>
             <th scope="row">Employer:</th>
-            <td></td>
+            <td th:text = ${Job.employer}></td>
         </tr>
 
         <tr>
             <th scope="row">Location:</th>
-            <td></td>
+            <td th:text = ${Job.location}></td>
         </tr>
 
         <tr>
             <th scope="row">Position Type:</th>
-            <td></td>
+            <td th:text = ${Job.PositionType}></td>
         </tr>
 
         <tr>
             <th scope="row">Skill:</th>
-            <td></td>
+            <td th:text = ${Job.coreCompetency}></td>
         </tr>
-
+        </th:block>
     </table>
 
 
