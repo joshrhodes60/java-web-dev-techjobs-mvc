@@ -6,6 +6,9 @@
 
 <div th:replace="fragments :: page-header"></div>
 
+
+
+
 <div class="container body-content">
 
     <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
@@ -39,6 +42,47 @@
     <!-- TODO #4 - Loop over the search results to display all job fields. -->
 
 </div>
+
+<table>
+
+    <th:block th:each = "Job : ${jobs}">
+        <tr>
+            <td th:text = "${job}"> </td>
+        </tr>
+
+        <tr>
+            <th scope="row">ID:</th>
+            <td th:text = ${Job.id}></td>
+        </tr>
+
+        <tr>
+            <th scope="row">Name:</th>
+            <td th:text = ${Job.name}></td>
+        </tr>
+
+        <tr>
+            <th scope="row">Employer:</th>
+            <td th:text = ${Job.employer}></td>
+        </tr>
+
+        <tr>
+            <th scope="row">Location:</th>
+            <td th:text = ${Job.location}></td>
+        </tr>
+
+        <tr>
+            <th scope="row">Position Type:</th>
+            <td th:text = ${Job.PositionType}></td>
+        </tr>
+
+        <tr>
+            <th scope="row">Skill:</th>
+            <td th:text = ${Job.coreCompetency}></td>
+        </tr>
+    </th:block>
+
+</table>
+
 
 </body>
 </html>
